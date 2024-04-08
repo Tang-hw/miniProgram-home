@@ -1,0 +1,31 @@
+<!-- detail.wxml -->
+<view class="page">
+  <!-- 菜品图片 -->
+  <image src="{{dishImage}}" mode="aspectFill"></image>
+
+  <!-- 菜谱 / 材料 切换 -->
+  <view class="switch">
+    <text class="{{selectedTab === 'recipe' ? 'active' : ''}}" bindtap="switchTab">菜谱</text>
+    <text class="{{selectedTab === 'ingredients' ? 'active' : ''}}" bindtap="switchTab">材料</text>
+  </view>
+
+  <!-- 菜谱内容 -->
+  <view class="recipe" wx:if="{{selectedTab === 'recipe'}}">
+    <textarea value="{{recipe}}" bindinput="inputRecipe"></textarea>
+  </view>
+
+  <!-- 材料列表 -->
+  <view class="ingredients" wx:if="{{selectedTab === 'ingredients'}}">
+    <block wx:for="{{ingredients}}" wx:key="index">
+      <view class="ingredient-item">
+        <text>{{item.name}}</text>
+        <text>{{item.quantity}}</text>
+      </view>
+    </block>
+  </view>
+
+  <!-- 做法 -->
+  <view class="method">
+    <textarea value="{{method}}" bindinput="inputMethod"></textarea>
+  </view>
+</view>

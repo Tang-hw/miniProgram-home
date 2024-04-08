@@ -1,0 +1,39 @@
+<!-- index.wxml -->
+<view class="page">
+
+ <!-- 顶部搜索框 -->
+  <view class="search-bar">
+    <input class="search-input" placeholder="👀 搜索菜品名称" bindinput="searchDishes"></input>
+  </view>
+
+<!-- 菜品信息展示 -->
+<view class="dish-info">
+  <block wx:for="{{dishes}}" wx:key="index">
+    <view class="dish-item">
+      <view class="dish-content">
+        <view class="dish-image-container">
+          <navigator url="/pages/detail/detail?id={{item.id}}">
+            <image src="{{item.image}}" mode="aspectFit" class="dish-image"></image>
+          </navigator>
+        </view>
+        <view class="dish-details">
+          <text class="dish-name">{{item.name}}</text>
+          <view class="user-like-info">
+            <view class="user-info">
+              <image src="{{item.userAvatar}}" mode="aspectFill" class="user-avatar"></image>
+              <text class="user-name">{{item.userName}}</text>
+            </view>
+            <text class="like-count">🤍 {{item.like}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </block>
+</view>
+
+
+
+
+  <!-- tabBar -->
+  <tabbar></tabbar>
+</view>

@@ -1,0 +1,48 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/detail/detail",
+    "pages/editUserInfo/editUserInfo",
+    "pages/fridge/fridge",
+    "pages/cart/cart",
+    "pages/mine/mine"
+  ],
+  "tabBar": {
+    "color": "#666666",
+    "selectedColor": "#000000",
+    "backgroundColor": "#FFFFFF",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "pages/images/tabBar/home.png",
+        "selectedIconPath": "pages/images/tabBar/home_selected.png"
+      },
+      {
+        "pagePath": "pages/fridge/fridge",
+        "text": "冰箱",
+        "iconPath": "pages/images/tabBar/fridge.png",
+        "selectedIconPath": "pages/images/tabBar/fridge_selected.png"
+      },
+      {
+        "pagePath": "pages/cart/cart",
+        "text": "购物车",
+        "iconPath": "pages/images/tabBar/cart.png",
+        "selectedIconPath": "pages/images/tabBar/cart_selected.png"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "我的",
+        "iconPath": "pages/images/tabBar/mine.png",
+        "selectedIconPath": "pages/images/tabBar/mine_selected.png"
+      }
+    ]
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "小绿本",
+    "navigationBarTextStyle": "black"
+  }
+}
