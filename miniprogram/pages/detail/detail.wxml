@@ -33,4 +33,4 @@
     <textarea value="{{method}}" bindinput="inputMethod"></textarea>
   </view>
 </view>
-<tab-bar></tab-bar> <!-- tabBar 组件 -->
+
