@@ -8,6 +8,7 @@
     "pages/mine/mine"
   ],
   "tabBar": {
+    "custom": false, 
     "color": "#666666",
     "selectedColor": "#000000",
     "backgroundColor": "#FFFFFF",

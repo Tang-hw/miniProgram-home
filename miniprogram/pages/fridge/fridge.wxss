@@ -1,1 +1,127 @@
-/* pages/fridge/fridge.wxss */
+/* fridge.wxss */
+
+.page {
+  /* 页面样式 */
+  padding: 0 20rpx; /* 左右留白 */
+}
+
+.search-bar {
+  background-color: #E0E0E0; /* 灰色背景 */
+  border-radius: 30rpx; /* 设置长方形椭圆形框 */
+  padding: 10rpx 20rpx; /* 添加内边距 */
+  display: flex;
+  align-items: center;
+}
+
+.search-input {
+  flex: 1; /* 输入框填充剩余空间 */
+  margin-right: 10rpx; /* 右侧留出一定的间距 */
+  border: none; /* 去除边框 */
+  background: none; /* 去除背景色 */
+  font-size: 28rpx; /* 字体大小 */
+}
+
+.add-icon,
+.minus-icon,
+.plus-icon {
+  width: 40rpx; /* 图标宽度 */
+  height: 40rpx; /* 图标高度 */
+}
+
+.fridge-content {
+  display: flex;
+  flex-direction: column; /* 每个材料项竖直排列 */
+}
+
+.material-item {
+  margin-bottom: 20rpx; /* 材料项下方间距 */
+}
+
+.material-bg {
+  height: 180rpx; /* 固定背景框高度 */
+  border: 1px solid #000000; /* 边框样式 */
+  border-radius: 20rpx; /* 圆角边框 */
+  padding: 20rpx; /* 内边距 */
+  display: flex;
+  align-items: center;
+}
+
+.material-image-container {
+  text-align: center; /* 图片水平居中 */
+}
+
+.material-image {
+  width: 80rpx; /* 图片宽度 */
+  height: 80rpx; /* 图片高度 */
+  border-radius: 50%; /* 圆形边框 */
+}
+
+.material-info {
+  margin-left: 20rpx; /* 图片与信息之间的间距 */
+  font-size: 24rpx; /* 字体大小 */
+}
+
+.material-name {
+  font-weight: bold; /* 材料名称字体加粗 */
+}
+
+.material-other-info {
+  font-size: 20rpx; /* 其他信息字体大小 */
+}
+
+.quantity-controls {
+  display: flex;
+  align-items: center;
+  margin-left: auto; /* 将加减按钮置于最右侧 */
+}
+
+.minus-icon,
+.plus-icon {
+  width: 30rpx; /* 图标宽度 */
+  height: 30rpx; /* 图标高度 */
+  margin-top: 5rpx; /* 将加号放在数量的上方 */
+  margin-bottom: 5rpx; /* 将减号放在数量的下方 */
+}
+
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.5); /* 半透明黑色背景 */
+}
+
+.popup-content {
+  width: 80%; /* 弹窗内容宽度 */
+  max-width: 500rpx; /* 最大宽度 */
+  background: #fff; /* 白色背景 */
+  border-radius: 20rpx; /* 圆角边框 */
+  padding: 20rpx; /* 内边距 */
+  border: 2rpx solid #fff; /* 白色边框 */
+}
+
+.popup-image {
+  width: 100%; /* 图片宽度 */
+  height: auto; /* 图片高度自适应 */
+  border-radius: 20rpx; /* 圆角边框 */
+  margin-bottom: 10rpx; /* 底部间距 */
+}
+
+.popup-info {
+  font-size: 24rpx; /* 字体大小 */
+  margin-bottom: 10rpx; /* 底部间距 */
+}
+
+.popup-buttons {
+  display: flex; /* 按钮水平排列 */
+  justify-content: space-between; /* 左右对齐 */
+}
+
+.popup-button {
+  width: 40rpx; /* 按钮宽度 */
+  height: 40rpx; /* 按钮高度 */
+}

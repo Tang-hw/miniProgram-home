@@ -3,26 +3,52 @@
   /* 页面样式 */
 }
 
-.switch {
-  /* 切换菜谱和材料的样式 */
+.images {
+  flex: 1;
 }
 
-.active {
-  /* 激活状态样式 */
+.tab {
+  /* 切换菜谱、材料、做法的样式 */
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.tab .text1,
+.tab .text2,
+.tab .text3 {
+  flex: 1;
+  text-align: center;
+  cursor: pointer;
+  transition: color 0.3s; /* 添加颜色过渡效果 */
+}
+
+.tab .text1:hover,
+.tab .text2:hover,
+.tab .text3:hover {
+  color: orange; /* 点击后文字变成橙色 */
 }
 
 .recipe {
-  /* 菜谱样式 */
+  /* 菜谱 */
+  background-color: #f9f9f9; /* 统一浅色背景 */
+  flex: 1;
 }
 
 .ingredients {
-  /* 材料列表样式 */
+  /* 材料 */
+  background-color: #f9f9f9; /* 统一浅色背景 */
+  flex: 1;
 }
 
 .ingredient-item {
   /* 单个材料样式 */
+  background-color: #f9f9f9; /* 统一浅色背景 */
 }
 
 .method {
-  /* 做法样式 */
+  /* 做法 */
+  background-color: #f9f9f9; /* 统一浅色背景 */
 }
