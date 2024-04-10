@@ -3,14 +3,15 @@
   <!-- 顶部用户信息展示 -->
   <view class="user-info" style="background-image: url('{{backgroundImage}}')">
     <view class="user-avatar-container">
-      <image class="user-avatar" src="{{userAvatar}}" mode="aspectFill"></image>
+      <image class="user-avatar" src="{{userAvatar}}" mode="scaleToFill"></image>
     </view>
     <view class="user-details">
       <text class="user-name">{{userName}}</text>
+      <button class="edit-btn" bindtap="gotoEditUserInfo">编辑</button>
       <text class="user-description">{{personalDescription}}</text>
-      <text class="user-count">菜品：{{dishCount}}  粉丝：{{fansCount}}</text>
+      <text class="user-menuCount">菜品：{{dishCount}} </text>
+      <text class="user-fansCount">粉丝：{{fansCount}} </text>
     </view>
-    <button class="edit-btn" bindtap="gotoEditUserInfo">编辑按钮</button>
   </view>
 
    <!-- 食谱 / 喜欢 -->

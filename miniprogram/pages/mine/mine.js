@@ -5,7 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    userName: "Owen.T",
+    userName: "Owen. T",
     userAvatar: "/pages/images/avatar.jpg", // 用户头像地址
     backgroundImage: '/pages/images/background.jpg', // 背景图片地址
     dishCount: 0,

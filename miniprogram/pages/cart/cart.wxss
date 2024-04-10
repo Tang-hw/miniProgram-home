@@ -13,7 +13,7 @@
 }
 
 .cart-bg {
-  background-color: #ffffff; /* 背景颜色 */
+  background-color: #fce3cc; /* 背景颜色 */
   border: 1px solid #000000; /* 边框样式 */
   border-radius: 20rpx; /* 圆角边框 */
   padding: 20rpx; /* 内边距 */
