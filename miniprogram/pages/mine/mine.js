@@ -13,10 +13,22 @@ Page({
     personalDescription: "个人描述XXXXXXXX",
     category: "菜品分类",
     dishes: [
-      { name: "川菜", image: "/pages/images/dish1.jpg" },
-      { name: "粤菜", image: "/pages/images/dish2.jpg" },
-      { name: "湘菜", image: "/pages/images/dish3.jpg" }
-    ]
+      { name: "歌山辣子鸡", category: "川菜", image: "/pages/images/dish/dish1.jpg" , userName: "Owen.T", userAvatar: "/pages/images/avatar.jpg", like:"7"},
+      { name: "腊肠煲仔饭", category: "粤菜", image: "/pages/images/dish/dish2.jpg",  userName: "Owen.T", userAvatar: "/pages/images/avatar.jpg", like:"8"},
+      { name: "小炒黄牛肉", category: "湘菜", image: "/pages/images/dish/dish3.jpg" , userName: "Owen.T", userAvatar: "/pages/images/avatar.jpg", like:"9"}
+    ],
+    likes:[
+      { name: "腊肠煲仔饭", category: "粤菜", image: "/pages/images/dish/dish2.jpg",  userName: "Owen.T", userAvatar: "/pages/images/avatar.jpg", like:"8"},
+    { name: "小炒黄牛肉", category: "湘菜", image: "/pages/images/dish/dish3.jpg" , userName: "Owen.T", userAvatar: "/pages/images/avatar.jpg", like:"9"}
+    ],
+    selectedTab: 'recipe', // 默认选中的tab，可以根据实际需求修改
+  },
+
+  selectTab(e) {
+    const tab = e.currentTarget.dataset.tab;
+    this.setData({
+      selectedTab: tab,
+    });
   },
 
   /**

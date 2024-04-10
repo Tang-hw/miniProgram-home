@@ -6,7 +6,7 @@
   </view>
   
 
-  <!-- 菜谱 / 材料 / 做法 -->
+  <!-- 菜谱 / 材料 / 做法 导航-->
   <view class="tab">
     <view class="text1" bindtap="selectTab" data-tab="recipe"> <text>菜谱</text> </view>
     <view class="text2" bindtap="selectTab" data-tab="ingredients"> <text>材料</text> </view>

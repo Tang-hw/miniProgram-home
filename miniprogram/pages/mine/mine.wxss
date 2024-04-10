@@ -2,6 +2,7 @@
 
 .page {
   padding: 20rpx; /* 页面留白 */
+  display: grid;
 }
 
 .user-info {
@@ -60,6 +61,7 @@
 }
 
 .tab {
+  background-color: #fff;
   display: flex;
   justify-content: space-around;
   margin-top: 20rpx; /* 选项卡与用户信息之间的间距 */
@@ -69,4 +71,12 @@
 .text2 {
   font-size: 26rpx; /* 选项卡文字大小 */
   padding: 10rpx 20rpx; /* 选项卡内边距 */
+  text-align: center;
+  cursor: pointer;
+  transition: color 0.3s; /* 添加颜色过渡效果 */
+}
+
+.tab .text1:hover,
+.tab .text2:hover{
+  color: orange; /* 点击后文字变成橙色 */
 }
