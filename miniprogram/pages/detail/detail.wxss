@@ -1,69 +1,7 @@
 /* detail.wxss */
 .page {
   /* 页面样式 */
-  display: grid;
-  grid-template-rows: 1fr 100rpx 1fr;
 }
 
-.images {
-  flex: 1;
-}
 
-.tab {
-  /* 切换菜谱、材料、做法的样式 */
-  background-color: #fff;
-  display: flex;
-  justify-content: space-between;
-  padding: 10px;
-  border-radius: 5px;
-}
 
-.tab .text1,
-.tab .text2,
-.tab .text3 {
-  flex: 1;
-  text-align: center;
-  cursor: pointer;
-  transition: color 0.3s; /* 添加颜色过渡效果 */
-}
-
-.tab .text1:hover,
-.tab .text2:hover,
-.tab .text3:hover {
-  color: orange; /* 点击后文字变成橙色 */
-}
-
-.recipe {
-  /* 菜谱 */
-  background-color: #f9f9f9; /* 统一浅色背景 */
-  flex: 1;
-  line-height: 80rpx;
-}
-
-.ingredients {
-  /* 材料 */
-  background-color: #f9f9f9; /* 统一浅色背景 */
-  flex: 1;
-}
-
-.ingredient-item {
-  /* 单个材料样式 */
-  background-color: orange; /* 将背景颜色设置为橙色 */
-  border-radius: 10px; /* 添加圆角（椭圆形） */
-  padding: 10px; /* 添加一些内边距以增加间距 */
-  margin: 0 20px; /* 添加左右边距以留白 */
-  display: flex; /* 使用 flexbox 进行对齐 */
-  justify-content: space-between; /* 均匀分布内容 */
-  margin-bottom: 20rpx;
-}
-
-.ingredient-item text {
-  flex: 1; /* Allow text to take up equal space */
-  line-height: 30rpx;
-}
-
-.method {
-  /* 做法 */
-  background-color: #f9f9f9; /* 统一浅色背景 */
-  line-height: 80rpx;
-}

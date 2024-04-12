@@ -7,30 +7,25 @@
   
 
   <!-- 菜谱 / 材料 / 做法 导航-->
-  <view class="tab">
-    <view class="text1" bindtap="selectTab" data-tab="recipe"> <text>菜谱</text> </view>
-    <view class="text2" bindtap="selectTab" data-tab="ingredients"> <text>材料</text> </view>
-    <view class="text3" bindtap="selectTab" data-tab="method"> <text>做法</text> </view>
-  </view>
+  <van-tabs animated>
+  <van-tab title="菜谱">
+  <text class="recipe">{{recipe}}</text>
+  </van-tab>
+  <van-tab title="材料">
+  <block wx:for="{{ingredients}}" wx:key="index">
+  <van-cell-group inset>
+  <van-cell title="{{item.name}}" value="{{item.quantity}}{{item.unit}}" />
+  </van-cell-group>
+  </block>
+  </van-tab>
+  <van-tab title="做法">
+    <text class="method">{{method}}</text>
+  </van-tab>
+</van-tabs>
 
-  <!-- 菜谱 -->
-  <view class="recipe" wx:if="{{selectedTab === 'recipe'}}">
-    <textarea value="{{recipe}}" bindinput="inputRecipe"></textarea>
-  </view>
 
-  <!-- 材料 -->
-  <view class="ingredients" wx:if="{{selectedTab === 'ingredients'}}">
-    <block wx:for="{{ingredients}}" wx:key="index">
-      <view class="ingredient-item">
-        <text>{{item.name}}</text>
-        <text>{{item.quantity}}</text>
-      </view>
-    </block>
-  </view>
-
-  <!-- 做法 -->
-  <view class="method" wx:if="{{selectedTab === 'method'}}">
-    <textarea value="{{method}}" bindinput="inputMethod"></textarea>
-  </view>
 </view>
+
+  
+
 

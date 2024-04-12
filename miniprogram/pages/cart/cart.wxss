@@ -2,18 +2,21 @@
 
 .page {
   padding: 0 20rpx; /* 左右留白 */
-}
 
+}
+.van-cell-group__title{
+    color: red !important;
+}
 .cart-content {
   margin-top: 20rpx; /* 顶部留白 */
 }
-
+ 
 .cart-item {
   margin-bottom: 20rpx; /* 条目下方间距 */
 }
 
 .cart-bg {
-  background-color: #fce3cc; /* 背景颜色 */
+  background-color:  rgb(179, 214, 205); /* 背景颜色 */
   border: 1px solid #000000; /* 边框样式 */
   border-radius: 20rpx; /* 圆角边框 */
   padding: 20rpx; /* 内边距 */

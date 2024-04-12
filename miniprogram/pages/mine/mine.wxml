@@ -1,24 +1,95 @@
 <!-- mine.wxml -->
 <view class="page">
   <!-- 顶部用户信息展示 -->
-  <view class="user-info" style="background-image: url('{{backgroundImage}}')">
-    <view class="user-avatar-container">
-      <image class="user-avatar" src="{{userAvatar}}" mode=""></image>
-    </view>
-    <view class="user-details">
-      <text class="user-name">{{userName}}</text>
-      <button class="edit-btn" bindtap="gotoEditUserInfo">编辑</button>
-      <text class="user-description">{{personalDescription}}</text>
-      <text class="user-menuCount">菜品：{{dishCount}} </text>
-      <text class="user-fansCount">粉丝：{{fansCount}} </text>
-    </view>
-  </view>
+  <van-row>
+  <van-col span="8" offset="2">
+    <!-- 用户信息展示 -->
+    <van-image
+    round
+    width="5rem"
+    height="5rem"
+    src="{{userAvatar}}"
+    /></van-col>
+  
+  <van-col span="7">
+    <text class="user-name">{{userName}}</text>
+  </van-col>
+  <van-col span="7">
+  <button class="edit-btn" bindtap="gotoEditUserInfo">编辑</button>
+  </van-col>
+  <van-col span="14">
+  <view class="user-description ">{{personalDescription}}</view>
+  </van-col>
+  <van-col span="7">
+    <text class="user-menuCount">食谱：{{dishCount}}</text>
+  </van-col>
+  <van-col span="7">
+    <text class="user-fansCount">粉丝：{{fansCount}}</text>
+  </van-col>
+  </van-row>
+  
+  
+    
 
-   <!-- 食谱 / 喜欢 导航 -->
-   <view class="tab">
-    <view class="text1" bindtap="selectTab" data-tab="dishes"> <text>食谱</text> </view>
-    <view class="text2" bindtap="selectTab" data-tab="likes"> <text>喜欢</text> </view>
-  </view>
+
+    <!-- 食谱 / 喜欢 导航 -->
+    <van-tabs animated>
+    
+    <van-tab title="我的食谱">
+      <view class="dish-box"> 
+      <view class="dish-info">
+        <block wx:for="{{dishes}}" wx:key="index">
+        <view class="dish-item">
+          <view class="dish-content">
+           <view class="dish-image-container">
+            <navigator url="/pages/detail/detail?id={{item.id}}">
+              <image src="{{item.image}}" mode="aspectFit" class="dish-image"></image>
+            </navigator>
+          </view>
+          <view class="dish-details">
+          <text class="dish-name">{{item.name}}</text>
+            <view class="dish-user-like-info">
+              <view class="dish-user-info">
+                <image src="{{item.userAvatar}}" mode="aspectFill" class="dish-user-avatar"></image>
+                <text class="dish-user-name">{{item.userName}}</text>
+              </view>
+                <text class="like-count">🤍 {{item.like}}</text>
+            </view>
+          </view>
+          </view>
+        </view>
+        </block>
+      </view>
+      </view>
+    </van-tab>
+    <van-tab title="我的喜欢">
+    <view class="dish-box">   
+     <block wx:for="{{likes}}" wx:key="index" >
+      <view class="dish-item">
+          <view class="dish-content">
+           <view class="dish-image-container">
+            <navigator url="/pages/detail/detail?id={{item.id}}">
+              <image src="{{item.image}}" mode="aspectFit" class="dish-image"></image>
+            </navigator>
+          </view>
+          <view class="dish-details">
+          <text class="dish-name">{{item.name}}</text>
+            <view class="dish-user-like-info">
+              <view class="dish-user-info">
+                <image src="{{item.userAvatar}}" mode="aspectFill" class="dish-user-avatar"></image>
+                <text class="dish-user-name">{{item.userName}}</text>
+              </view>
+                <text class="like-count">🤍 {{item.like}}</text>
+            </view>
+          </view>
+          </view>
+        </view>
+     </block>
+    </view>
+    </van-tab>
+    </van-tabs>
+
+
 
   <!-- 食谱 -->
   <view class="dishes" wx:if="{{selectedTab === 'dishes'}}">

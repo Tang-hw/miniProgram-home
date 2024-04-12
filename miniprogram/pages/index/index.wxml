@@ -2,9 +2,11 @@
 <view class="page">
 
  <!-- 顶部搜索框 -->
-  <view class="search-bar">
-    <input class="search-input" placeholder="👀 搜索菜品名称" bindinput="searchDishes"></input>
-  </view>
+ <van-search
+  value="{{ value }}"
+  shape="round"
+  placeholder="搜索菜品名称"
+  />
 
 <!-- 菜品信息展示 -->
 <view class="dish-info">

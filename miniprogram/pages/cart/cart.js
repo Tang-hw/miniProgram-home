@@ -2,10 +2,44 @@
 
 Page({
   data: {
+    
     materials: [
-      { name: "苹果", category: "水果", quantity: 5, currency: "￥", price: 2.5 },
-      { name: "牛奶", category: "饮品", quantity: 2, currency: "￥", price: 5 },
-      { name: "鸡蛋", category: "肉蛋", quantity: 12, currency: "￥", price: 3 }
+      {
+        id:21,
+
+        type:"水果",
+        items:[
+          {
+            id:1,
+            name:'苹果',
+           value:1
+          },
+          {
+            id:2,
+            name:'葡萄',
+           value:1
+          }
+        ]
+      },
+      {
+        id:11,
+        type:"水果",
+        items:[
+          {
+            id:1,
+            name:'苹果',
+           value:1
+          },
+          {
+            id:2,
+            name:'葡萄',
+           value:1
+          }
+        ]
+      }
+      // { name: "苹果", category: "水果", quantity: 5},
+      // { name: "牛奶", category: "饮品", quantity: 2},
+      // { name: "鸡蛋", category: "肉蛋", quantity: 12}
     ]
   },
 
