@@ -10,7 +10,7 @@ Page({
     backgroundImage: '/pages/images/background.jpg', // 背景图片地址
     dishCount: 0,
     fansCount: 0,
-    personalDescription: "个人描述XXXXXXXX",
+    personalDescription: "世界第一美食评论家",
     category: "菜品分类",
     dishes: [
       { name: "歌山辣子鸡", category: "川菜", image: "/pages/images/dish/dish1.jpg" , userName: "Owen.T", userAvatar: "/pages/images/avatar.jpg", like:"7"},
