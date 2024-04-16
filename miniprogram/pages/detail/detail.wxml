@@ -2,7 +2,7 @@
 <view class="page">
   <!-- 菜品图片 -->
   <view class="image">
-  <image src="{{dishImage}}" mode="aspectFill"></image>
+  <van-image width="300" height="200" src="{{dishImage}}" />
   </view>
   
 
