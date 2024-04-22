@@ -1,5 +1,6 @@
 from flask import Flask
 from config import Config
+from dashboard.index import index
 from db import db
 from route.dish_details_routes import dish_details
 from route.dish_square_route import dish_square
@@ -29,6 +30,10 @@ def create_app():
     app.register_blueprint(shopping_cart)
     # 注册用户信息相关蓝图
     app.register_blueprint(user_info)
+
+    # 前端视图
+    # index主页面
+    app.register_blueprint(index)
 
 
     return app
