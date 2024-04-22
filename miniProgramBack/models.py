@@ -44,9 +44,6 @@ class DishSquare(db.Model):
     author_id = db.Column(db.Integer, nullable=False)
     hotness = db.Column(db.Integer)
 
-
-
-
     def __repr__(self):
             return f'DishSquare(id={self.id}, dish_id={self.dish_id}, author_id={self.author_id}, hotness={self.hotness})'
 
@@ -71,6 +68,18 @@ class Fridge(db.Model):
 
     def __repr__(self):
         return f'Fridge(id={self.id}, name={self.name}, user_id={self.user_id}, quantity={self.quantity})'
+
+class IngredientsList(db.Model):
+    # 定义材料清单表模型...
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String(255), nullable=False)
+    quantity = db.Column(db.Integer, nullable=False)
+    unit = db.Column(db.String(50), nullable=False)
+    dish_id = db.Column(db.Integer, db.ForeignKey('dish_details.id'), nullable=False)
+
+    def __repr__(self):
+        return f'IngredientsList(id={self.id}, name={self.name}, quantity={self.quantity}, dish_id={self.dish_id})'
+
 
 
 class ShoppingCart(db.Model):
