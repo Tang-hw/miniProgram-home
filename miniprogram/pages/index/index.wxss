@@ -1,0 +1,79 @@
+/* index.wxss */
+.page {
+  /* 页面样式 */
+}
+
+.dish-info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 20rpx;
+}
+
+.dish-item {
+  width: calc(50% - 20rpx); /* 一行放两个，间距为 20rpx */
+  background-color: #fff;
+  border-radius: 10rpx;
+  box-shadow: 0 2rpx 10rpx rgba(0, 0, 0, 0.1);
+  margin-bottom: 20rpx;
+}
+
+.dish-content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.dish-image-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dish-image {
+
+  height: 100px;
+  border-top-left-radius: 10rpx;
+  border-top-right-radius: 10rpx;
+  object-fit: cover; /* 图片尺寸超出容器时，保持比例并裁剪 */
+}
+
+.dish-details {
+  padding: 20rpx;
+  padding-top: 0;
+}
+
+.user-like-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+}
+
+.user-avatar {
+  width: 40rpx;
+  height: 40rpx;
+  border-radius: 50%;
+  margin-right: 10rpx;
+}
+
+.like-count {
+  font-size: 24rpx;
+  color: #666;
+}
+
+.user-name {
+  font-size: 24rpx; /* 调整用户名字体大小 */
+  color: #666;
+}
+
+.dish-name {
+  font-size: 28rpx;
+  margin-bottom: 10rpx;
+  line-height: 80rpx;
+}

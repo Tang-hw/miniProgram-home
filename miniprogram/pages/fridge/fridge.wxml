@@ -1,0 +1,36 @@
+<!-- fridge.wxml -->
+
+<view class="page">
+  <!-- 顶部搜索栏 -->
+  <van-search
+  value="{{ value }}"
+  shape="round"
+  placeholder="搜索材料名称"
+  />
+
+  <!-- 冰箱内容 -->
+  <!-- 遍历分类 按类型排 -->
+  <block wx:for="{{categorys}}" wx:key="index">
+  <van-cell-group title="{{item.name}}">
+    <!-- 遍历特定类型的材料 按序号排 -->
+    <block wx:for="{{item.materials}}" wx:key="index">
+      <van-card
+      num="{{item.quantity}}"
+      currency="{{item.currency}}"
+      price="{{item.price}}"
+      desc="剩余 {{item.expiry}} 天过期"
+      title="{{item.name}}"
+      thumb="{{item.image}}"
+      thumb-mode="cover"
+      >
+      <view slot="footer">
+        <van-button round="ture" icon="/pages/images/plus.png"size="mini"></van-button>
+        <van-button round="ture" icon="/pages/images/minus.png" size="mini"></van-button>
+      </view>
+      </van-card>
+     </block>
+  </van-cell-group>
+  </block>
+  
+
+</view>

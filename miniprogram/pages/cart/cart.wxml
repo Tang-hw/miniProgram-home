@@ -1,0 +1,41 @@
+<!-- pages/cart/cart.wxml -->
+
+<view class="page">
+  <van-cell-group title="水果"    >
+  <van-cell title='葡萄'  value="1个" />
+    
+   
+  <van-cell title="柚子" value="1个" />
+  <van-cell title="菠萝" value="1个" />
+  </van-cell-group>
+  <van-cell-group title="分组2">
+  <van-cell title="单元格" value="内容" />
+  </van-cell-group>
+
+
+
+
+  <!-- 购物车内容 -->
+  <view class="cart-content">
+    <block wx:for="{{materials}}" wx:key="index">
+      <view class="cart-item">
+        <!-- 背景框 -->
+        <view class="cart-bg">
+          <!-- 材料信息 -->
+          <view class="cart-info">
+            <text class="material-category">{{item.category}}</text>
+            <text class="material-name">{{item.name}}</text>
+          </view>
+          <!-- 加减按钮 -->
+          <view class="quantity-controls">
+            <image class="minus-icon" src="/pages/images/minus.png"></image>
+            <text class="quantity">{{item.quantity}}</text>
+            <image class="plus-icon" src="/pages/images/plus.png"></image>
+          </view>
+          <!-- 删除按钮 -->
+          <image class="delete-icon" src="/pages/images/delete.png"></image>
+        </view>
+      </view>
+    </block>
+  </view>
+</view>

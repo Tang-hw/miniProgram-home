@@ -1,0 +1,53 @@
+/* pages/cart/cart.wxss */
+
+.page {
+  padding: 0 20rpx; /* 左右留白 */
+
+}
+.van-cell-group__title{
+    color: red !important;
+}
+.cart-content {
+  margin-top: 20rpx; /* 顶部留白 */
+}
+ 
+.cart-item {
+  margin-bottom: 20rpx; /* 条目下方间距 */
+}
+
+.cart-bg {
+  background-color:  rgb(179, 214, 205); /* 背景颜色 */
+  border: 1px solid #000000; /* 边框样式 */
+  border-radius: 20rpx; /* 圆角边框 */
+  padding: 20rpx; /* 内边距 */
+  display: flex;
+  align-items: center;
+}
+
+.cart-info {
+  flex: 1; /* 信息填充剩余空间 */
+}
+
+.material-name {
+  font-weight: bold; /* 材料名称字体加粗 */
+}
+
+.quantity-controls {
+  display: flex;
+  align-items: center;
+  margin-left: auto; /* 将加减按钮置于最右侧 */
+}
+
+.minus-icon,
+.plus-icon {
+  width: 30rpx; /* 图标宽度 */
+  height: 30rpx; /* 图标高度 */
+  margin-top: 5rpx; /* 将加号放在数量的上方 */
+  margin-bottom: 5rpx; /* 将减号放在数量的下方 */
+}
+
+.delete-icon {
+  width: 30rpx; /* 图标宽度 */
+  height: 30rpx; /* 图标高度 */
+  margin-left: 10rpx; /* 删除按钮与数量控制之间的间距 */
+}

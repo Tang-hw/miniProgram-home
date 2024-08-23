@@ -1,0 +1,9 @@
+/* fridge.wxss */
+
+.page {
+  /* 页面样式 */
+}
+
+.van-card__img{
+  border-radius: 50% !important;
+}

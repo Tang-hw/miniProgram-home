@@ -1,0 +1,8 @@
+/* detail.wxss */
+.page {
+  /* 页面样式 */
+  padding: 20rpx;
+}
+
+
+

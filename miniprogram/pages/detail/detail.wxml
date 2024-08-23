@@ -1,0 +1,31 @@
+<!-- detail.wxml -->
+<view class="page">
+  <!-- 菜品图片 -->
+  <view class="image">
+  <van-image width="300" height="200" src="{{dishImage}}" />
+  </view>
+  
+
+  <!-- 菜谱 / 材料 / 做法 导航-->
+  <van-tabs animated>
+  <van-tab title="菜谱">
+  <text class="recipe">{{recipe}}</text>
+  </van-tab>
+  <van-tab title="材料">
+  <block wx:for="{{ingredients}}" wx:key="index">
+  <van-cell-group inset>
+  <van-cell title="{{item.name}}" value="{{item.quantity}}{{item.unit}}" />
+  </van-cell-group>
+  </block>
+  </van-tab>
+  <van-tab title="做法">
+    <text class="method">{{method}}</text>
+  </van-tab>
+</van-tabs>
+
+
+</view>
+
+  
+
+
